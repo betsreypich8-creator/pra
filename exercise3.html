@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Exercise 3</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+            background-color: #f0f0f0; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            height: 600px;
+            padding: 1rem; 
+            gap: 1rem; 
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header, .footer {
+            height: 50px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+            flex-shrink: 0; 
+        }
+        
+        .header {
+            background-color: #1e90ff; 
+            box-shadow: 0 4px 6px #0077ea; 
+        }
+
+        .footer {
+            background-color: #4169e1; 
+            box-shadow: 0 4px 6px #1d44b8; 
+        }
+
+        .content-area {
+            display: flex;
+            flex-grow: 1; 
+            gap: 1rem; 
+        }
+
+        .main {
+            background-color: #3cb371;
+            padding: 1rem; 
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px #2f8d59;
+            
+            flex-grow: 3; 
+
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 1rem; 
+            
+            align-content: flex-start;
+        }
+
+        .sidebar {
+            background-color: #ff6347; 
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px #e02200;
+            
+            flex-grow: 1; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item {
+            background-color: #2f8d59; 
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px #226741;
+            
+            width: calc(25% - 0.75rem); 
+            height: 50px; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header</header>
+        
+        <div class="content-area">
+            <main class="main">
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+            </main>
+            <aside class="sidebar">sidebar</aside>
+        </div>
+
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>

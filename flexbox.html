@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Exercise 1</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;  /* full height of the screen */
+            font-family: sans-serif;
+            background-color: #ffc0cb; 
+            padding-left: 10em; 
+            padding-right: 10em; 
+            box-sizing: border-box; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; 
+
+            width: 600px; 
+            height: 600px; 
+            background-color: #666; 
+
+            gap: 1em; /*means the space between items inside a flex or grid container is 1 em */
+
+            padding-top: 100px;
+            padding-bottom: 100px; 
+
+            color: white;
+            text-align: center;
+        }
+
+        .header, .footer {
+            width: 100%; /*means the element’s width will take up 100% of its parent container’s width.*/
+            height: 50px; 
+            background-color: #999; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            flex-grow: 1; /* will expand to fill available space */
+
+            width: 100%; 
+            background-color: #777; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <main class="main">Main</main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
